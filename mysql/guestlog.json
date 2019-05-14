@@ -1,0 +1,14 @@
+[
+{"type":"header","version":"4.8.5","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"guestlog"},
+{"type":"table","name":"guestlist","database":"guestlog","data":
+[
+{"first_name":"Justin","last_name":"Brandon","city_state":"Shreveport, LA","date_visited":"2019-05-12 19:17:30","short_message":"Test message"},
+{"first_name":"Bill","last_name":"Gates","city_state":"Redmon, Washinton","date_visited":"2019-05-12 19:31:44","short_message":"Microsoft is everywhere. Who needs Linux?"},
+{"first_name":"Boba","last_name":"Fett","city_state":"Kamino","date_visited":"2019-05-13 11:37:52","short_message":"Searching For Luke Skywalker. Reward offered."},
+{"first_name":"Han","last_name":"Solo","city_state":"Nomad","date_visited":"2019-05-13 12:32:46","short_message":"Greedo shot first!"},
+{"first_name":"Luke","last_name":"Skywalker","city_state":"Everywhere","date_visited":"2019-05-13 12:37:03","short_message":"Boba is not looking for me."},
+{"first_name":"Yoda","last_name":"","city_state":"Everywhere","date_visited":"2019-05-13 17:16:41","short_message":"Here, I am."}
+]
+}
+]

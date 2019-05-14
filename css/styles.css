@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0}
+body {
+    background-color: rgb(2, 5, 44);
+    background-image: url(/photos/trooper.jpg);
+    background-position: top ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  } 
+  header {
+      overflow: hidden;
+      height: 100vh; 
+      background: url(/photos/trooper.jpg)
+       50%/cover; 
+  }
+  h1 {
+    color: white;
+    mix-blend-mode: difference;
+    font: 900 15vmin/15vh cookie, cursive;
+    text-align: center
+  }
+  p {
+    color: rgb(238, 239, 247);
+    font-size: xx-large;
+  }

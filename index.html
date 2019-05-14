@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Guest Log Book</title>
+</head>
+    <link rel="stylesheet" href="\css\styles.css">
+<body>
+    <div id="header">
+        <h1 aria-multiline='true' >Guest Log Book</h1>
+    </div>
+<form method="post">
+    <p>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="firstname" id="first_name">
+    </p>
+    <p>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="lastname" id="last_name">
+    </p>
+    <p>
+        <label for="city_state">City and State:</label>
+        <input type="text" name="citystate" id="city_state">
+    </p>
+    <p>
+        <label for="short_message">Comment:</label>
+        <textarea rows="3" cols="35" name="shortmessage" id="short_message"> </textarea>
+    </p>       
+    <input type="submit" value="Submit" onclick="addtoDB()">
+    <a href="display.php">View Log Book</a> 
+</form>
+<p id=”submitted></p>
+<script>
+    function addtoDB() {
+      var xhttp; 
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById("submitted").innerHTML = "form submitted";
+        }
+      };
+       var first_name = document.getElementById('first_name').value;
+       var last_name = document.getElementById('last_name').value;
+       var city_state = document.getElementById('city_state').value;
+       var short_message = document.getElementById('short_message').value;
+       var queryString = "?firstname=" + first_name +  "&lastname=" + last_name + "&citystate=" + city_state + "&shortmessage=" + short_message;
+       console.log(queryString);
+       xhttp.open("GET", "insert.php" + queryString, true);
+       xhttp.send(null); 
+    
+    }
+    </script>
+    <!--Storm Trooper image from https://wall.alphacoders.com/big.php?i=76383-->
